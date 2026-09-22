@@ -5,7 +5,7 @@ url: "https://vinacherryhsui.github.io"
 
 author: Vina Hsui
 avatar:      # 之後有頭像圖片再填路徑，例如 assets/img/avatar.png
-favicon: ""     # 之後有 favicon 再填
+favicon:     # 之後有 favicon 再填
 
 header_text: 研究筆記與產業分析
 footer_text: >
