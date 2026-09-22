@@ -1,0 +1,41 @@
+title: Vina Hsui
+description: "研究筆記與產業分析 — 地緣政治風險、總體經濟、半導體供應鏈"
+baseurl: ""
+url: "https://vinacherryhsui.github.io"
+
+author: Vina Hsui
+avatar: ""      # 之後有頭像圖片再填路徑，例如 assets/img/avatar.png
+favicon: ""     # 之後有 favicon 再填
+
+header_text: 研究筆記與產業分析
+footer_text: >
+  © 2026 Vina Hsui. Built with Jekyll and Type on Strap.
+
+excerpt: true
+post_navigation: true
+katex: true       # 開啟數學公式渲染，之後碩論那篇會用到
+
+paginate: 5
+paginate_path: "blog/page:num"
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+
+portfolio: true    # 開啟作品集頁（放你的 repo）
+search: true
+tags: true
+
+markdown: kramdown
+highlighter: rouge
+
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed, jekyll-remote-theme]
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+
+remote_theme: sylhare/Type-on-Strap
