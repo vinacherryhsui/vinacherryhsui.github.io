@@ -5,6 +5,6 @@ date: 2026-09-22
 img: "assets/img/portfolio/advanced-packaging-lead-lag.svg"
 ---
 
-先進封裝（OSAT、基板/材料供應商、垂直整合 IDM）市場層 Granger 因果網絡分析，找出供應鏈中誰是訊號的領先指標。
+先進封裝供應鏈市場層 Granger 因果網絡分析。
 
-完整程式碼與資料：[GitHub repo](https://github.com/vinacherryhsui/advanced-packaging-lead-lag)
+[閱讀完整分析 →](/2026/09/22/先進封裝-slug/)　|　[GitHub repo](https://github.com/vinacherryhsui/advanced-packaging-lead-lag)
