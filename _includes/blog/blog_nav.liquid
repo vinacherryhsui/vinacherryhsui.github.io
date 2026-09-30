@@ -4,7 +4,7 @@
         
         {% if paginator.previous_page and paginator.previous_page != 1%}
         <!-- << -->
-        <a aria-label="{{ site.data.language.str_previous_page | default: 'Prev' }}" href="{{ '/' | relative_url }}" class="button">
+        <a aria-label="{{ site.data.language.str_previous_page | default: 'Prev' }}" href="{{ '/blog/' | relative_url }}" class="button">
             <span><i class="fas fa-angle-double-left"></i></span>
         </a>
         {% endif %}
