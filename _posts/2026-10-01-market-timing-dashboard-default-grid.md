@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 
 <!--more-->
 
-> 這是「總經燈號儀表板」系列的一篇。系列文章：[可挑選的 21 個總經指標]({% post_url 2026-10-01-market-timing-dashboard-indicators %})｜[預設九宮格是怎麼選出來的]({% post_url 2026-10-01-market-timing-dashboard-default-grid %})
+> 這是「總經燈號儀表板」系列的一篇。系列文章：[每個人都可以有自己的九宮格]({% post_url 2026-10-01-market-timing-dashboard-intro %})｜[可挑選的 21 個總經指標]({% post_url 2026-10-01-market-timing-dashboard-indicators %})｜[預設九宮格是怎麼選出來的]({% post_url 2026-10-01-market-timing-dashboard-default-grid %})
 
 我挑選這九個指標時，最主要的原則是讓九個位置盡量分別代表不同的經濟環境。九宮格的位置有限，如果同一類訊號放得太多，即使每個指標本身都有參考價值，最後看到的資訊仍然會高度重複。
 

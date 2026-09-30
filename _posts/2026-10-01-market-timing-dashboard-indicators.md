@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 
 <!--more-->
 
-> 這是「總經燈號儀表板」系列的一篇。系列文章：[可挑選的 21 個總經指標]({% post_url 2026-10-01-market-timing-dashboard-indicators %})｜[預設九宮格是怎麼選出來的]({% post_url 2026-10-01-market-timing-dashboard-default-grid %})
+> 這是「總經燈號儀表板」系列的一篇。系列文章：[每個人都可以有自己的九宮格]({% post_url 2026-10-01-market-timing-dashboard-intro %})｜[可挑選的 21 個總經指標]({% post_url 2026-10-01-market-timing-dashboard-indicators %})｜[預設九宮格是怎麼選出來的]({% post_url 2026-10-01-market-timing-dashboard-default-grid %})
 
 每個指標燈號有紅、黃、綠三種狀態，背後的判斷方式有兩種：
 
