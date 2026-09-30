@@ -2,9 +2,12 @@
 layout: post
 title: 先進封裝供應鏈 Lead-Lag 分析
 date: 2026-09-22
-img: "assets/img/portfolio/advanced-packaging-lead-lag.svg"
+img: "assets/img/portfolio/advanced-packaging-lead-lag.png"
+summary: 先進封裝供應鏈裡，哪些公司的股價比較早反映資訊，哪些比較常跟在後面？
+featured: false
+links:
+  - label: 閱讀文章
+    url: /2026/09/22/advanced-packaging-lead-lag.html
+  - label: GitHub
+    url: https://github.com/vinacherryhsui/advanced-packaging-lead-lag
 ---
-
-先進封裝供應鏈市場層 Granger 因果網絡分析。
-
-[閱讀完整分析 →](/2026/09/22/先進封裝-slug/)　|　[GitHub repo](https://github.com/vinacherryhsui/advanced-packaging-lead-lag)

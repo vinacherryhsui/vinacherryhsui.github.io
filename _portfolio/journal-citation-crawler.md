@@ -1,10 +1,13 @@
 ---
 layout: post
-title: Journal Citation Crawler：期刊被引資料蒐集工具
+title: Journal-Citation-Crawler
 date: 2026-09-30
-img: "assets/img/portfolio/journal-citation-crawler.svg"
+img: "assets/img/portfolio/journal-citation-crawler.png"
+summary: 輸入期刊 ISSN 和年份，自動收集 OpenAlex 的被引用資料，一年一份 CSV。
+featured: true
+links:
+  - label: GitHub
+    url: https://github.com/vinacherryhsui/Journal-Citation-Crawler
+  - label: 閱讀文章
+    url: /2026/09/30/journal-citation-crawler.html
 ---
-
-輸入期刊 ISSN 與年份，就能用 OpenAlex 蒐集該期刊文章的被引用資料，並輸出成 CSV 的桌面小工具。
-
-[閱讀完整說明 →](/2026/09/30/journal-citation-crawler/)　|　[GitHub repo](https://github.com/vinacherryhsui/Journal-Citation-Crawler)
