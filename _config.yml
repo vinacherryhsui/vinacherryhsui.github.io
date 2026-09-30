@@ -8,7 +8,7 @@ author: Vina Hsui
 avatar:      # 之後有頭像圖片再填路徑，例如 assets/img/avatar.png
 favicon:     # 之後有 favicon 再填
 
-header_text: 研究筆記與產業分析
+header_text: 我的研究與實作
 footer_text: >
   © 2026 Vina Hsui. Built with Jekyll and Type on Strap.
 
@@ -34,6 +34,7 @@ highlighter: rouge
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed, jekyll-remote-theme]
 
 exclude:
+  - AGENTS.md
   - Gemfile
   - Gemfile.lock
   - README.md
