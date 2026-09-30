@@ -41,7 +41,8 @@ excerpt_separator: <!--more-->
 我用到的控制變數包括金融不確定性（Ludvigson、Ma 與 Ng，2021）、新台幣匯率（央行）和聯邦基金利率（FRED）。樣本是 1985 年 1 月到 2025 年 12 月的月資料。
 
 使用 R 跑統計分析[^1]，資料前處理用 Python。
-[^1]:SVAR、TVP-VAR、local projection 和 VARX 分別用 vars、bvarsv、lpirfs 和 MTS 套件，VaR 的部分用 Buczman（2018）公開在 GitHub 上的 CAViaR R 程式碼估計，圖用 ggplot2 畫。論文用 LaTeX 排版，在 Overleaf 上編譯。
+
+[^1]: SVAR、TVP-VAR、local projection 和 VARX 分別用 vars、bvarsv、lpirfs 和 MTS 套件，VaR 的部分用 Buczman（2018）公開在 GitHub 上的 CAViaR R 程式碼估計，圖用 ggplot2 畫。論文用 LaTeX 排版，在 Overleaf 上編譯。
 
 ## 包含穩健性分析，整篇碩論用到的五個模型
 
@@ -80,6 +81,7 @@ $$
 ## 換一個模型，結果還在嗎？
 
 我另外用 Local Projection 和 VARX 檢查[^2]，三個模型都換算成一個標準差的衝擊，以下是放在同一張圖上比較的結果。
+
 [^2]: SVAR 假設了整個系統的結構，Local Projection 則不需要，對模型設定錯誤比較不敏感。VARX 模型中我是把 GPR 當作完全外生的變數去測試模型的穩健性。
 
 ![SVAR、LP、VARX 的衝擊反應疊圖](/assets/img/posts/gpr-twstockmarket/irf_overlay_svar_lp_varx_lngpr.png)
@@ -95,7 +97,8 @@ $$
 *標準化後的全球 GPR 與台灣特定 GPR。*
 
 再來我們把兩個變數分別估計出來的即期反應效果並排來看[^3]，全球 GPR 對報酬率的估計是 −0.01537，對下行風險是 +0.11524，信賴區間都離開零。然而台灣特定風險的估計值貼近零，信賴區間涵蓋零。
-[^3]:這裡為了更好的比較兩個變數的結果，全球 GPR 指標改用一階差分後的 GPR 而不是 ln_GPR，所以數字和前面的模型結果不同。
+
+[^3]: 這裡為了更好的比較兩個變數的結果，全球 GPR 指標改用一階差分後的 GPR 而不是 ln_GPR，所以數字和前面的模型結果不同。
 
 ![全球與台灣特定風險的即期反應](/assets/img/posts/gpr-twstockmarket/impact_global_local_dotwhisker.png)
 
@@ -110,7 +113,8 @@ $$
 ## 為什麼台股對本地風險反應這麼有限？
 
 我認為造成這個結果有兩個主要原因[^4]。
-[^4]:這一段是我的個人解讀，論文中沒有直接用資料跟模型來檢驗機制。是我認為後續研究值得深入的方向。
+
+[^4]: 這一段是我的個人解讀，論文中沒有直接用資料跟模型來檢驗機制。是我認為後續研究值得深入的方向。
 
 第一個是習慣化。由於兩岸風險長年以來都以反覆出現、但沒有真正升級的威脅形式存在，市場長期下來已經把它當成背景條件，新的一次軍演對股價來說不太算新訊息。Zhang 等人（2023）、Kim（2014）、Dessaint 與 Matray（2017）都有類似的發現，就是說風險的衝擊會隨著基準預期升高和重複出現而遞減。
 
