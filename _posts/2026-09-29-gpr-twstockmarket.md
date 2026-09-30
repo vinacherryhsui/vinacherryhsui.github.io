@@ -2,7 +2,7 @@
 layout: post
 title: "台海一緊張，台股為什麼沒崩？四十年地緣政治風險的實證"
 date: 2026-09-29
-tags: [碩論, 地緣政治風險, 台股, 計量經濟]
+tags: [碩論, 地緣政治風險, 台股, 衝擊反應]
 excerpt_separator: <!--more-->
 ---
 
