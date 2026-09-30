@@ -1,7 +1,8 @@
 title: Vina Hsui
-description: "研究筆記與產業分析 — 地緣政治風險、總體經濟、半導體供應鏈"
+description: "用計量方法研究總體環境與台灣股市"
 baseurl: ""
 url: "https://vinacherryhsui.github.io"
+timezone: Asia/Taipei
 
 author: Vina Hsui
 avatar:      # 之後有頭像圖片再填路徑，例如 assets/img/avatar.png
