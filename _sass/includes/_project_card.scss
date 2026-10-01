@@ -22,8 +22,17 @@
   border: 1px solid var(--border);
   border-radius: $border-radius;
 
-  &__image-link {
-    display: block;
+  &__link {
+    color: inherit;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &:hover {
+      color: inherit;
+      filter: none;
+      text-decoration: none;
+    }
   }
 
   &__image {
@@ -41,6 +50,7 @@
   }
 
   &__title {
+    color: var(--link);
     margin: 0 0 0.5em;
   }
 
@@ -49,16 +59,6 @@
     margin: 0;
   }
 
-  &__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75em;
-    margin-top: 1.25em;
-
-    .button {
-      margin: 0;
-    }
-  }
 }
 
 @media screen and (max-width: $break) {

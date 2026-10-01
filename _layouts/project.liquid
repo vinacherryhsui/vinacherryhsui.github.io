@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{% assign related_posts = '' | split: '' %}
+{% if page.posts %}
+    {% for related_url in page.posts %}
+        {% assign related_post = site.posts | where: "url", related_url | first %}
+        {% if related_post %}
+            {% assign related_posts = related_posts | push: related_post %}
+        {% endif %}
+    {% endfor %}
+    {% assign related_posts = related_posts | sort: "date" | reverse %}
+{% endif %}
+
+<article class="project-page">
+    <header class="project-page__header">
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="project-page__summary">{{ page.summary }}</p>
+        {% if page.demo %}
+            <a class="button project-page__primary-link" href="{{ page.demo.url | relative_url }}"{% if page.demo.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ page.demo.label }}</a>
+        {% endif %}
+    </header>
+
+    {% if related_posts.size > 0 %}
+    <section class="project-page__section">
+        <h2>相關文章</h2>
+        <ul class="project-page__post-list">
+            {% for related_post in related_posts %}
+            <li>
+                <a href="{{ related_post.url | relative_url }}">{{ related_post.title }}</a>
+                <time datetime="{{ related_post.date | date_to_xmlschema }}">{{ related_post.date | date: "%Y-%m-%d" }}</time>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if page.code %}
+    <section class="project-page__section">
+        <h2>程式碼</h2>
+        <a class="button" href="{{ page.code.url | relative_url }}"{% if page.code.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ page.code.label }}</a>
+    </section>
+    {% endif %}
+
+    {% if page.links %}
+    <section class="project-page__section">
+        <h2>相關連結</h2>
+        <ul class="project-page__link-list">
+            {% for link in page.links %}
+            <li><a href="{{ link.url | relative_url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</article>
