@@ -7,6 +7,24 @@ h1.title {
   padding: 0.5em 0;
 }
 
+article:has(> header h1#About) {
+  padding-top: 1.5%;
+
+  > header {
+    margin-bottom: 3%;
+  }
+
+  .title-padder {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+  h1#About {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+}
+
 
 .subtitle {
   @extend .subtle-txt-shadow;
