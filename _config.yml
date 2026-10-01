@@ -41,3 +41,5 @@ exclude:
   - vendor/
 
 remote_theme: sylhare/Type-on-Strap
+
+image: /assets/img/share-preview.png
