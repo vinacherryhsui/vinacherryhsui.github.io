@@ -29,11 +29,11 @@ layout: default
     </section>
     <section class="home-projects">
         <h2 id="projects">Projects</h2>
-        {% assign featured_projects = site.portfolio | where: "featured", true | sort: "order" %}
-        {% assign other_projects = site.portfolio | where_exp: "project", "project.featured != true" | sort: "date" | reverse %}
-        {% assign homepage_projects = featured_projects | concat: other_projects %}
+        {% capture project_list %}{% include project_list.html %}{% endcapture %}
+        {% assign project_urls = project_list | split: '|' %}
         <div class="project-card-grid">
-            {% for project in homepage_projects %}
+            {% for project_url in project_urls %}
+                {% assign project = site.portfolio | where: "url", project_url | first %}
                 {% include project_card.html project=project %}
             {% endfor %}
         </div>

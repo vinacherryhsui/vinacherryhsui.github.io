@@ -1,0 +1,32 @@
+.project-nav {
+  @extend %padding-nav;
+  display: flex;
+  width: 100%;
+
+  a {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  p {
+    @extend .meta;
+  }
+
+  &__previous,
+  &__next {
+    width: 50%;
+  }
+
+  &__next {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  @media screen and (max-width: $sm-break) {
+    a,
+    p {
+      font-size: 0.8em;
+    }
+  }
+}

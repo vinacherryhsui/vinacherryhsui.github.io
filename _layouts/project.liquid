@@ -11,6 +11,31 @@ layout: default
     {% endfor %}
 {% endif %}
 
+{% capture project_list %}{% include project_list.html %}{% endcapture %}
+{% assign project_urls = project_list | split: '|' %}
+{% assign previous_project_url = nil %}
+{% assign next_project_url = nil %}
+{% assign current_project_found = false %}
+{% for project_url in project_urls %}
+    {% if current_project_found %}
+        {% assign next_project_url = project_url %}
+        {% break %}
+    {% endif %}
+    {% if project_url == page.url %}
+        {% assign current_project_found = true %}
+    {% else %}
+        {% assign previous_project_url = project_url %}
+    {% endif %}
+{% endfor %}
+{% if current_project_found %}
+    {% if previous_project_url %}
+        {% assign previous_project = site.portfolio | where: "url", previous_project_url | first %}
+    {% endif %}
+    {% if next_project_url %}
+        {% assign next_project = site.portfolio | where: "url", next_project_url | first %}
+    {% endif %}
+{% endif %}
+
 <article class="project-page">
     <header class="project-page__header">
         <h1 class="title">{{ page.title }}</h1>
@@ -52,3 +77,24 @@ layout: default
     </section>
     {% endif %}
 </article>
+
+{% if previous_project or next_project %}
+<nav class="project-nav" aria-label="專案導覽">
+    {% if previous_project %}
+    <div class="project-nav__previous">
+        <a href="{{ previous_project.url | relative_url }}">
+            <p>上一個專案</p>
+            {{ previous_project.title }}
+        </a>
+    </div>
+    {% endif %}
+    {% if next_project %}
+    <div class="project-nav__next">
+        <a href="{{ next_project.url | relative_url }}">
+            <p>下一個專案</p>
+            {{ next_project.title }}
+        </a>
+    </div>
+    {% endif %}
+</nav>
+{% endif %}

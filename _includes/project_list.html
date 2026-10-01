@@ -1,0 +1,6 @@
+{%- assign featured_projects = site.portfolio | where: "featured", true | sort: "order" -%}
+{%- assign other_projects = site.portfolio | where_exp: "project", "project.featured != true" | sort: "date" | reverse -%}
+{%- assign sorted_projects = featured_projects | concat: other_projects -%}
+{%- for project in sorted_projects -%}
+{{- project.url -}}{%- unless forloop.last -%}|{%- endunless -%}
+{%- endfor -%}
