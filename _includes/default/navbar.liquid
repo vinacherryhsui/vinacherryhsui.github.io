@@ -24,7 +24,13 @@
         {% assign emptyArray = '' | split: '' %}
         {% assign menus = site.data.menu | default: emptyArray %}
         {% assign pages = site.pages | concat: menus | sort: 'position' %}
+        {% if site.paginate_path %}
+        {% assign paginate_path_prefix = site.paginate_path | replace: ':num', '' | prepend: '/' %}
+        {% endif %}
         {% for page in pages %}
+        {% if paginate_path_prefix and page.url contains paginate_path_prefix %}
+        {% continue %}
+        {% endif %}
         {% unless page.title == null or page.hide or name_page contains page.title %}
             <li class="separator"> | </li>
             <li>
