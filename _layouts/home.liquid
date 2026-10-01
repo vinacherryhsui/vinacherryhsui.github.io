@@ -28,10 +28,12 @@ layout: default
         <p>國立政治大學（NCCU）國際經營與貿易學系碩士畢業，國立成功大學經濟系學士畢業。</p>
     </section>
     <section class="home-projects">
-        <h2>Projects</h2>
+        <h2 id="projects">Projects</h2>
         {% assign featured_projects = site.portfolio | where: "featured", true | sort: "order" %}
+        {% assign other_projects = site.portfolio | where_exp: "project", "project.featured != true" | sort: "date" | reverse %}
+        {% assign homepage_projects = featured_projects | concat: other_projects %}
         <div class="project-card-grid">
-            {% for project in featured_projects %}
+            {% for project in homepage_projects %}
                 {% include project_card.html project=project %}
             {% endfor %}
         </div>

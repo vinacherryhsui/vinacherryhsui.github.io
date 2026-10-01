@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: null
 title: Projects
-position: 1
 permalink: /portfolio/
+hide: true
 ---
 
-{% include portfolio.html %}
+<meta http-equiv="refresh" content="0; url={{ '/#projects' | relative_url }}">
+<link rel="canonical" href="{{ '/#projects' | absolute_url }}">
