@@ -2,6 +2,7 @@
 layout: post
 title: 先進封裝供應鏈 Lead-Lag 分析
 date: 2026-09-22
+order: 4
 img: "assets/img/portfolio/advanced-packaging-lead-lag.png"
 summary: 先進封裝供應鏈裡，哪些公司的股價比較早反映資訊，哪些比較常跟在後面？
 featured: false

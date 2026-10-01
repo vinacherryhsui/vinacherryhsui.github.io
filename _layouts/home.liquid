@@ -23,6 +23,17 @@ layout: default
     <div id="main" class="call-out call-out_img">
         <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
     </div>
-    {% capture _blog %}{% include blog/blog.liquid %}{% endcapture %}
-    {{ _blog | split: " " | join: " "}}
+    <section class="home-intro">
+        <p>用計量方法研究總體環境與台灣股市，也喜歡把研究裡的想法做成可以直接使用的產品或工具。</p>
+        <p>國立政治大學（NCCU）國際經營與貿易學系碩士畢業，國立成功大學經濟系學士畢業。</p>
+    </section>
+    <section class="home-projects">
+        <h2>Projects</h2>
+        {% assign featured_projects = site.portfolio | where: "featured", true | sort: "order" %}
+        <div class="project-card-grid">
+            {% for project in featured_projects %}
+                {% include project_card.html project=project %}
+            {% endfor %}
+        </div>
+    </section>
 </div>

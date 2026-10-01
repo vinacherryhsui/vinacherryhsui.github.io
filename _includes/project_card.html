@@ -1,0 +1,19 @@
+{% assign project = include.project %}
+<article class="project-card">
+    <a class="project-card__image-link" href="{{ project.url | relative_url }}" aria-label="{{ project.title }}">
+        <img class="project-card__image" src="{{ project.img | relative_url }}" alt="{{ project.title }}" loading="lazy">
+    </a>
+    <div class="project-card__content">
+        <h3 class="project-card__title">
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h3>
+        <p class="project-card__summary">{{ project.summary }}</p>
+        {% if project.links %}
+        <div class="project-card__actions">
+            {% for link in project.links limit: 2 %}
+            <a class="button" href="{{ link.url | relative_url }}">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</article>

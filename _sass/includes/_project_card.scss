@@ -1,0 +1,68 @@
+.home-intro,
+.home-projects {
+  @extend %padding-post;
+}
+
+.home-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5em;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: $border-radius;
+
+  &__image-link {
+    display: block;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25em;
+  }
+
+  &__title {
+    margin: 0 0 0.5em;
+  }
+
+  &__summary {
+    flex: 1;
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+    margin-top: 1.25em;
+
+    .button {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $break) {
+  .project-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
