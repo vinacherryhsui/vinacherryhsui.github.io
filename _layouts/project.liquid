@@ -9,7 +9,6 @@ layout: default
             {% assign related_posts = related_posts | push: related_post %}
         {% endif %}
     {% endfor %}
-    {% assign related_posts = related_posts | sort: "date" | reverse %}
 {% endif %}
 
 <article class="project-page">
