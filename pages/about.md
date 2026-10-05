@@ -13,7 +13,7 @@ Hi, I'm Vina 👋
 
 這個部落格會記錄我做過的研究、投資與資料分析，也會放一些把想法做成工具的過程。
 
-目前的研究興趣：地緣政治風險量化、半導體供應鏈（先進封裝）產業分析、總體經濟指標建構。
+目前的研究興趣：地緣政治風險量化、總體經濟指標建構。
 
 - GitHub: [github.com/vinacherryhsui](https://github.com/vinacherryhsui)
 
