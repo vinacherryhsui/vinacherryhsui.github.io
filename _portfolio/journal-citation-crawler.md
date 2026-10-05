@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Journal-Citation-Crawler
+title: 期刊引用資料擷取工具
 date: 2026-09-30
 order: 3
 img: "assets/img/portfolio/journal-citation-crawler.png"
